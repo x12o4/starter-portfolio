@@ -1,6 +1,7 @@
 body {
   font-family: 'Montserrat', Arial;
   color:white;
+  height:2000px;
 }
 
 /* Start Section Styles */
@@ -107,6 +108,7 @@ body {
 }
 .about-Section{
   background-color: #222831;
+  
 }
 .user-icon{
   
@@ -116,7 +118,39 @@ body {
   display:flex;
   
 }
-.about{
-  
-  padding-top:50px;
+.about-Section {
+  background-color: #222831;
+  padding: 20px;
+  position: relative;
+  padding-bottom:300px;
+}
+
+.about {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+/* Create a different layout with float */
+.display-Section {
+  width: 40%; /* Take up only 60% of the width */
+  margin-left: 50px;
+  overflow: hidden; /* Clear the float */
+  margin-top:70px;
+}
+
+.user-icon {
+  float: left;
+  width: 150px;
+  height: auto;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  font-size: 18px;
+  display: block;
+  text-align: left;
 }
