@@ -1,5 +1,6 @@
 body {
   font-family: 'Montserrat', Arial;
+  color:white;
 }
 
 /* Start Section Styles */
@@ -103,4 +104,19 @@ body {
 
 .navbar-toggler {
   border-color: #EEEEEE !important;
+}
+.about-Section{
+  background-color: #222831;
+}
+.user-icon{
+  
+}
+
+.display-Section{
+  display:flex;
+  
+}
+.about{
+  
+  padding-top:50px;
 }
