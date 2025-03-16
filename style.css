@@ -10,20 +10,22 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 120px;
+  padding-top: 390px;
   text-align: center;
-  padding-bottom: 120px;
+  padding-bottom: 390px;
   background-color: #222831;
 }
 
 .start-section button {
-  margin-top: 20px;
+  margin-top: 40px;
   color: #00ADB5;
   background-color: #222831;
   font-weight: 500;
   font-size: 16px;
   border-color: #00ADB5;
   transition: transform 0.3s ease;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .start-section button:hover {
@@ -35,7 +37,7 @@ body {
 }
 
 #intro {
-  font-size: 32px;
+  font-size: 60px;
   color: #EEEEEE;
 }
 
@@ -48,6 +50,7 @@ body {
 .navbar {
   padding: 0 !important;
   background-color: #393E46;
+  box-shadow: 5px 5px 5px 5px black;
 }
 
 .navbar .navbar {
@@ -73,6 +76,9 @@ body {
   display: flex;
   align-items: center;
   transform: scale(1.1);
+}
+.navbar-nav .nav-item {
+  margin-right: 20px;
 }
 
 .nav-item {
@@ -110,19 +116,13 @@ body {
   background-color: #222831;
   
 }
-.user-icon{
-  
-}
 
-.display-Section{
-  display:flex;
-  
-}
 .about-Section {
   background-color: #222831;
   padding: 20px;
   position: relative;
-  padding-bottom:300px;
+  padding-bottom:390px;
+  padding-top:100px;
 }
 
 .about {
@@ -131,26 +131,54 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
+  transition: 1.5 ease;
+}
+.about:hover{
+transform: scale(1.1);
+text-decoration: underline;
+color:#00ADB5;
 }
 
 /* Create a different layout with float */
 .display-Section {
-  width: 40%; /* Take up only 60% of the width */
-  margin-left: 50px;
-  overflow: hidden; /* Clear the float */
-  margin-top:70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Pushes items apart */
+  width: 80%;
+  max-width: 1000px;
+  margin: auto;
+  text-align: left;
 }
 
 .user-icon {
-  float: left;
   width: 150px;
   height: auto;
-  margin-right: 30px;
-  margin-bottom: 20px;
+  margin-left: 30px; /* Adds spacing between text and image */
+  padding-right:20px;
+  
 }
+  
 
 .about-description {
   font-size: 18px;
-  display: block;
+  flex: 1; /* Allows the text to take up remaining space */
   text-align: left;
+}
+.technologies {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.tech img {
+  padding-top:50px;
+  width: 100px;
+  height: auto;
+  padding-right:20px;
+  transition: 0.2 ease;
+}
+
+.tech img:hover{
+  transform: scale(1.1);
 }
