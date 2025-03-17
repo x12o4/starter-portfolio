@@ -624,3 +624,29 @@ body, button, input {
   margin-bottom: 90px;
 
 }
+.footer1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
+}
+.footer1 img{
+  padding-top:50px;
+  width: 100px;
+  height: auto;
+  padding-right:20px;
+  transition: 0.2 ease;
+  margin-left: 30px;
+ 
+  
+}
+
+.footer1 img:hover{
+  cursor: pointer;
+  color: white;
+  
+  transform: scale(1.1);
+  border: 1px solid transparent;
+
+}
