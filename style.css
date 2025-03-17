@@ -1,7 +1,7 @@
 body {
   font-family: 'Montserrat', Arial;
   color:white;
-  height:2000px;
+  min-height: 5000px;
 }
 
 /* Start Section Styles */
@@ -51,7 +51,21 @@ body {
   padding: 0 !important;
   background-color: #393E46;
   box-shadow: 5px 5px 5px 5px black;
+  position: relative;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
 }
+  
+  .navbar.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white; /* Adjust for visibility */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+
 
 .navbar .navbar {
   width: 100%;
@@ -126,18 +140,25 @@ body {
 }
 
 .about {
-  padding-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
-  transition: 1.5 ease;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 200px;
+  position: relative;
+  color: white;
 }
-.about:hover{
-transform: scale(1.1);
-text-decoration: underline;
-color:#00ADB5;
+.about::after{
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  width: 80px;
+  height: 4px;
+  background-color: #00ADB5;
 }
+
+
 
 /* Create a different layout with float */
 .display-Section {
@@ -163,6 +184,7 @@ color:#00ADB5;
   font-size: 18px;
   flex: 1; /* Allows the text to take up remaining space */
   text-align: left;
+  font-weight: 300;
 }
 .technologies {
   display: flex;
@@ -181,4 +203,424 @@ color:#00ADB5;
 
 .tech img:hover{
   transform: scale(1.1);
+}
+
+/* Project Section Styles */
+/* Project Section Styles */
+.project-holder {
+  padding: 80px 20px;
+  background-color: #222831;
+  
+}
+
+.project-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 200px;
+  position: relative;
+  color: white;
+
+}
+
+.project-heading:after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  width: 80px;
+  height: 4px;
+  background-color: #00ADB5;
+}
+
+/* Projects container */
+.projects {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px; /* Increased gap between projects */
+}
+
+/* Project box - all are large now */
+.project-box {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #2E333A;
+  height: 400px; /* Consistent height for all projects */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 300px;
+  padding: 0px;
+  overflow: hidden;
+  
+}
+
+/* Alternate projects layout (right-left swap) */
+
+
+
+/* Left side with image */
+.project-left {
+  flex: 1;
+  background-color: #f0f0f0;
+}
+
+.project-image {
+  
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  
+}
+
+/* Right side with content */
+.project-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  position: relative;
+}
+
+/* Project title */
+.project-title {
+  font-size: 1.8rem;
+  color: #00ADB5;
+  margin: 15px 0;
+}
+
+/* Project description */
+.project-description {
+  font-size: 1rem;
+  color: #EEEEEE;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Button styles */
+.live-app, .project-learn-more {
+  padding: 12px 20px;
+  border: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 60px;
+}
+
+.live-app {
+  background-color: #00ADB5;
+  color: white;
+  align-self: flex-start;
+  width: 100%;
+}
+
+.project-learn-more {
+  background-color: transparent;
+  border: 1px solid #00ADB5;
+  color: #00ADB5;
+  width: 100%;
+  margin-top: 20px; /* Push button to bottom */
+}
+
+.live-app:hover, .project-learn-more:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .project-box {
+    flex-direction: column !important; /* Override even/odd direction */
+    height: auto;
+  }
+  
+  .project-left {
+    height: 250px;
+    width: 100%;
+  }
+  
+  .project-right {
+    width: 100%;
+    padding: 20px;
+  }
+}
+.contact-section{
+  padding-bottom: 350px;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: linear-gradient(to right, #ea1d6f 0%, #eb466b 100%);
+  font-size: 12px;
+}
+
+body, button, input {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.background {
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 0 1 700px;
+  margin: auto;
+  padding: 10px;
+}
+
+.screen {
+  position: relative;
+  background: #3e3e3e;
+  border-radius: 15px;
+}
+
+.screen:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+  z-index: -1;
+}
+
+.screen-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: #4d4d4f;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.screen-header-left {
+  margin-right: auto;
+}
+
+.screen-header-button {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 3px;
+  border-radius: 8px;
+  background: white;
+}
+
+.screen-header-button.close {
+  background: #ed1c6f;
+}
+
+.screen-header-button.maximize {
+  background: #e8e925;
+}
+
+.screen-header-button.minimize {
+  background: #74c54f;
+}
+
+.screen-header-right {
+  display: flex;
+}
+
+.screen-header-ellipsis {
+  width: 3px;
+  height: 3px;
+  margin-left: 2px;
+  border-radius: 8px;
+  background: #999;
+}
+
+.screen-body {
+  display: flex;
+}
+
+.screen-body-item {
+  flex: 1;
+  padding: 50px;
+}
+
+.screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #00ADB5;
+  font-size: 26px;
+}
+
+.app-title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 25px;
+  height: 4px;
+  background: #00ADB5;
+}
+
+.app-contact {
+  margin-top: auto;
+  font-size: 16px;
+  color: #888;
+}
+
+.app-form-group {
+  margin-bottom: 15px;
+}
+
+.app-form-group.message {
+  margin-top: 40px;
+}
+
+.app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.app-form-control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  color: #ddd;
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color .2s;
+}
+
+.app-form-control::placeholder {
+  color: #666;
+}
+
+.app-form-control:focus {
+  border-bottom-color: #ddd;
+}
+
+.app-form-button {
+  background: none;
+  border: none;
+  color: #00ADB5;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+}
+
+.app-form-button:hover {
+  color: #084f70;
+}
+
+.credits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  color: #ffa4bd;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.credits-link {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.dribbble {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+}
+
+@media screen and (max-width: 520px) {
+  .screen-body {
+    flex-direction: column;
+  }
+
+  .screen-body-item.left {
+    margin-bottom: 30px;
+  }
+
+  .app-title {
+    flex-direction: row;
+  }
+
+  .app-title span {
+    margin-right: 12px;
+  }
+
+  .app-title:after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .screen-body {
+    padding: 40px;
+  }
+
+  .screen-body-item {
+    padding: 0;
+  }
+}
+.contact-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+  color: white;
+  
+}
+
+.contact-header:after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  width: 80px;
+  height: 4px;
+  background-color: #00ADB5;
+}
+
+.contact-container{
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers horizontally */
+    text-align: center; /* Centers text */
+  }
+
+}
+.contact-description {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 90px;
+
 }
